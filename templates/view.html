@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+</head>
+<body style="background:#111; color:white; text-align:center;">
+
+<h1>Admin Dashboard</h1>
+
+<h2>Bookings</h2>
+<table border="1" style="margin:auto;">
+<tr>
+<th>Place</th>
+<th>Date</th>
+<th>phone</th>
+</tr>
+
+{% for b in bookings %}
+<tr>
+<td>{{ b[1] }}</td>
+<td>{{ b[2] }}</td>
+<td>{{ b[3] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<br><br>
+
+<h2>Contact Messages</h2>
+<table border="1" style="margin:auto;">
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>phone</th>
+<th>Message</th>
+</tr>
+
+{% for c in contacts %}
+<tr>
+<td>{{ c[1] }}</td>
+<td>{{ c[2] }}</td>
+<td>{{ c[3] }}</td>
+<td>{{ c[4] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<br><br>
+<a href="/logout" style="color:orange;">Logout</a>
+
+</body>
+</html>
